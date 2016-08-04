@@ -111,6 +111,8 @@ class BuildCommand(build):
       module.include_dirs.append('yara/windows/include')
       module.libraries.append('advapi32')
       module.libraries.append('user32')
+      module.libraries.append('legacy_stdio_definitions')
+      module.libraries.append('OLDNAMES')
     else:
       building_for_windows = False
 
